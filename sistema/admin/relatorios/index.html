@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
 
     <link rel="stylesheet" href="../../assets/css/admin/pages/relatorios/index.css">
 </head>
+
 <body>
     <header>
         <h1>Sistema de Hotelaria</h1>
@@ -25,11 +27,36 @@
     </header>
 
     <main>
-        
+        <div class="reports-header">
+            <h2>Visualizar Relatório</h2>
+            <div>
+                <button class="btn" onclick="window.print()">
+                    <i class="fa-solid fa-print"></i> Imprimir
+                </button>
+                <a href="../dashboard" class="btn">
+                    <i class="fa-solid fa-arrow-left"></i> Voltar
+                </a>
+            </div>
+        </div>
+
+        <div class="report-metadata">
+            <p><strong>Relatório:</strong> Ocupação Mensal</p>
+            <p><strong>Período:</strong> Agosto 2025</p>
+            <p><strong>Gerado em:</strong> 23/08/2025</p>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="reportChart"></canvas>
+        </div>
     </main>
 
     <footer>
         &copy; 2025 HotelSys. Todos os direitos reservados.
     </footer>
+
+    <script src="https://kit.fontawesome.com/3c32900202.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../assets/js/admin/pages/relatorios/index.js"></script>
 </body>
+
 </html>
